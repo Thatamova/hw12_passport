@@ -1,0 +1,66 @@
+<%- include("../layout/head", {title: title}) %>
+
+<div class="container row" style="margin-top: 16px">
+  <form method="POST" action="/user/signup" style="width: 18rem; margin-right: 20px">
+    <div class="form-group">
+      <label for="username">Логин</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="username"
+        required
+      >
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        required
+      >
+    </div>
+    <div class="form-group">
+      <label for="displayName">Имя</label>
+      <input
+        type="text"
+        class="form-control"
+        id="displayName"
+        name="displayName"
+        required
+      >
+    </div>
+
+    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+  </form>
+
+  <form method="POST" action="/user/login" style="width: 18rem; margin-left: 20px">
+    <div class="form-group">
+      <label for="username">Логин</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="username"
+        required
+      >
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        required
+      >
+    </div>
+
+    <button type="submit" class="btn btn-primary">Войти</button>
+  </form>
+
+  <a href="/" class="btn btn-secondary" style="margin-top: 80px">Отмена</a>
+</div>
+<%- include("../layout/footer") %>

@@ -1,0 +1,14 @@
+<%- include("../layout/head", {title: title}) %>
+
+<div class="card" style="width: 50rem; margin-bottom: 16px">
+  <div class="card-body">
+    <h6 class="card-subtitle">ID: <%= user.id %></h6>
+    <br>
+    <h6 class="card-subtitle">Логин: <%= user.username %></h6>
+    <br>
+    <h6 class="card-subtitle">Имя: <%= user.displayName %></h6>
+  </div>
+</div>
+
+<a href="/user/logout" class="btn btn-secondary">Выйти</a>
+<%- include("../layout/footer") %>

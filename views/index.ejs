@@ -1,0 +1,15 @@
+<%- include("./layout/head", {title: title}) %>
+
+<div class="jumbotron">
+  <h1 class="display-4"><%= title %></h1>
+  <hr class="my-4">
+  <p class="lead">
+    <% if (!user) { %>
+      <a class="btn btn-primary btn-lg" href="/user/login" role="button">Войти</a>
+    <% } else { %>
+      <p>Ваш личный кабинет, <%= user.displayName %></p>
+      <a class="btn btn-primary btn-lg" href="/user/me" role="button">Перейти</a>
+    <% } %>
+  </p>
+</div>
+<%- include("./layout/footer") %>
